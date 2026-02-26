@@ -49,13 +49,10 @@ export default defineConfig({
     base: "/",
     trailingSlash: "always",
     adapter: adapter,
-    webAnalytics: {
-      enabled: true, // set to false when using @vercel/analytics@1.4.0
-    },
     integrations: [
         decapCmsOauth({
             decapCMSVersion: "3.9.0",
-            oauthDisabled: true, // Disable it to use oauth, requires .env configuration
+            oauthDisabled: false, // Disable it to use oauth, requires .env configuration
         }),
         swup({
             theme: false,
